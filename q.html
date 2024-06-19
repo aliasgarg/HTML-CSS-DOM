@@ -5,35 +5,41 @@
     <link rel="stylesheet" href="ht.css" />
   </head>
   <body>
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card solid"></div> 
-    <div class="card"></div> 
+<input type="text" id="pass">
+<p>Caps On!</p>
+    
     <script>
-    let allCards = document.querySelectorAll(".card");
-    let prevCard;
-    allCards.forEach((card) => {
-      card.addEventListener("mouseleave",(e) => {
-          prevCard = e.currentTarget;
-      })
+    let inputElem = document.querySelector("input");
+    let pElem = document.querySelector("p");
+    let shiftKey;
+    inputElem.addEventListener("keydown", (e) => {
+      if(e.getModifierState("CapsLock")) {
+          pElem.style.display = "block"
+          e.preventDefault();
+      } 
 
-      card.addEventListener("mouseenter", (e) => {
-            if (!prevCard) return;
+      else {
+        pElem.style.display = "none"
 
-            prevCard.classList.remove("solid");
-            allCards.forEach((eachCard) => {
-              if (prevCard !== eachCard)
-              eachCard.classList.add("solid");
-            })
-      })
+
+      }
+      if(!shiftKey) e.preventDefault();
 
     })
+
+    document.documentElement.addEventListener("keydown", (e) => {
+      let myKey = e.key;
+      if(myKey === "Shift") shiftKey = true
+      
+
+    })
+
+    document.documentElement.addEventListener("keyup", (e) => {
+      let myKey = e.key;
+      if(myKey === "Shift") shiftKey = false;
+      
+    })
+
     </script>
   
   </body>
