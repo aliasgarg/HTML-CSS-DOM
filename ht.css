@@ -1,17 +1,25 @@
-* {
-  box-sizing: border-box;
-}
+      body {
+        text-align: center;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
 
-input {
-  display: block;
-  margin: auto;
-  margin-top: 10rem;
-  width: 25rem;
-  height: 3rem;
-}
-
-p {
-  text-align: center;
-  font-size: 3rem;
-  display: none;
-}
+      table {
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        width: 60%;
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+      form {
+        margin-top: 2rem;
+        text-align: center;
+      }
+      thead {
+        background-color: aqua;
+      }
+    
