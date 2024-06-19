@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vishal</title>
+    <link rel="stylesheet" href="ht.css" />
+  </head>
+  <body>
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card solid"></div> 
+    <div class="card"></div> 
+    <script>
+    let allCards = document.querySelectorAll(".card");
+    let prevCard;
+    allCards.forEach((card) => {
+      card.addEventListener("mouseleave",(e) => {
+          prevCard = e.currentTarget;
+      })
+
+      card.addEventListener("mouseenter", (e) => {
+            if (!prevCard) return;
+
+            prevCard.classList.remove("solid");
+            allCards.forEach((eachCard) => {
+              if (prevCard !== eachCard)
+              eachCard.classList.add("solid");
+            })
+      })
+
+    })
+    </script>
+  
+  </body>
+</html>
