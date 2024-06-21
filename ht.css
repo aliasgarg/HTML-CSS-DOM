@@ -1,25 +1,32 @@
-      body {
+div {
         text-align: center;
+        
       }
-      table,
-      th,
-      td {
-        border: 1px solid;
-      }
+.button {
+  border: 1px solid;
+  padding: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  margin: 3rem 
+ 
+  
+}   
+#grey {
+  background-color: grey;
+  
+  width: 8rem;
+  height: 5rem;
 
-      table {
-        margin-left: auto;
-        margin-right: auto;
-        border-collapse: collapse;
-        width: 60%;
-        padding: 1rem;
-        font-size: 1.5rem;
-      }
-      form {
-        margin-top: 2rem;
-        text-align: center;
-      }
-      thead {
-        background-color: aqua;
-      }
-    
+}
+#pink {
+  background-color: pink;
+}
+#skyblue {
+  background-color: skyblue;
+}
+#purple {
+  background-color: purple;
+}
+#orange {
+  background-color: orange;
+}
