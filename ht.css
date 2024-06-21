@@ -1,15 +1,12 @@
-div {
+.canvas {
         text-align: center;
         
       }
-.button {
+.maincont {
+  display: flex;
   border: 1px solid;
-  padding: 1rem;
-  margin-top: 5rem;
-  margin-bottom: 6rem;
-  margin: 3rem 
+  justify-content: space-between;
  
-  
 }   
 #grey {
   background-color: grey;
@@ -20,13 +17,21 @@ div {
 }
 #pink {
   background-color: pink;
+  width: 8rem;
+  height: 5rem;
 }
 #skyblue {
   background-color: skyblue;
+  width: 8rem;
+  height: 5rem;
 }
 #purple {
   background-color: purple;
+  width: 8rem;
+  height: 5rem;
 }
 #orange {
   background-color: orange;
+  width: 8rem;
+  height: 5rem;
 }
